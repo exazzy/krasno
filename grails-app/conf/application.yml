@@ -11,16 +11,19 @@ dataSource:
     pooled: true
     jmxExport: true
 
-    driverClassName: org.postgresql.Driver
-    username: krasno
-    password:
+    driverClassName: com.mysql.jdbc.Driver
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    username: 'jamos'
+    password: 'change.me'
+
+#    default_schema: 'krasno'
 
 environments:
     development:
         dataSource:
             dbCreate: update
-            url: jdbc:postgresql://localhost:5432/krasno
-            hibernate.default_schema: 'public'
+            url: jdbc:mysql://localhost/krasno
+#            url: jdbc:postgresql://localhost:5432/jamos
     test:
         dataSource:
             dbCreate: update

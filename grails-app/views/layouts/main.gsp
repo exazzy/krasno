@@ -13,6 +13,7 @@
     <g:layoutHead/>
 </head>
 <body>
+    <g:render template="/header"/>
     <g:layoutBody/>
     <asset:javascript src="application.js"/>
 </body>
