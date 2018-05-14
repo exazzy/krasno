@@ -22,20 +22,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="firstName" class="col-md-3 control-label">Имя</label>
-                        <div class="col-md-12">
-                            <g:textField class="form-control" name="firstName" placeholder="Имя"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="lastName" class="col-md-3 control-label">Фамилия</label>
-                        <div class="col-md-12">
-                            <g:textField class="form-control" name="lastName" placeholder="Фамилия"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="password" class="col-md-3 control-label">Пароль</label>
                         <div class="col-md-12">
                             <g:passwordField class="form-control" name="password" placeholder="Пароль"/>
@@ -49,10 +35,10 @@
                         </div>
                     </div>
 
-                    <div class="form-group" style="margin-top: 20px">
+                    <div class="form-group" style="margin-top: 30px">
                         <div class="col-md-offset-2 col-md-10">
                             <g:submitButton id="btn_signup" class="btn btn-info col-md-9" name="Зарегистрироваться">
-                                <i class="icon-hand-right"></i> &nbsp Зарегистрироваться
+                                <i class="icon-hand-right"></i>Зарегистрироваться
                             </g:submitButton>
                         </div>
                     </div>

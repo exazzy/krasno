@@ -5,16 +5,12 @@ package org.jamos.krasno.domain
 class User {
 
     String email
-    String firstName
-    String lastName
     String password
     String confirm
 //    LocalDateTime created
 
     static constraints = {
 
-        firstName(bank: false, minSize: 2, maxSize: 100)
-        lastName(bank: false, minSize: 2, maxSize: 100)
         password(blank: false, minSize: 6)
 
         validator: { val, obj ->

@@ -22,13 +22,13 @@ class UserController {
                 email: params.email,
                 firstName: params.firstName,
                 lastName: params.lastName,
-                password: SecurityUtils.hash(params.password)
+                password: params.password
         )
 
-        if (!user.save()) {
-            return [user: user]
+        if (!user.validate()) {
+            redirect(action: 'signup', params: [user: user])
         }
 
-        redirect(controller: 'main')
+        redirect(controller: 'main', action: 'indexn                                                                                                                                                                                                                                                                                                                              ')
     }
 }

@@ -9,16 +9,11 @@
             </button>
             <a class="navbar-brand" href="#">Грузоперевозки</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Имя пользователя" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Пароль" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Войти</button>
-            </form>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="navbar-right" href="${g.createLink(controller: 'user', action: 'login')}">Войти</a></li>
+                <li><a class="navbar-right" href="${g.createLink(controller: 'user', action: 'signup')}">Зарегистрироваться</a></li>
+            <ul>
         </div>
     </div>
 </nav>
