@@ -7,13 +7,30 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Грузоперевозки</a>
+            <g:link class="navbar-brand" controller="main">Грузоперевозки</g:link>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="navbar-right" href="${g.createLink(controller: 'user', action: 'login')}">Войти</a></li>
-                <li><a class="navbar-right" href="${g.createLink(controller: 'user', action: 'signup')}">Зарегистрироваться</a></li>
-            <ul>
+                <g:if test="${!session.user}">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="navbar-right" href="${g.createLink(controller: 'user', action: 'login')}">Войти</a></li>
+                        <li><a class="navbar-right" href="${g.createLink(controller: 'user', action: 'register')}">Зарегистрироваться</a></li>
+                    </ul>
+                </g:if>
+                <g:else>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <div class="user-menu-icon"></div>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:alert('Смотрите во всех кинатеатрах. В июне...')">Профиль</a>
+                                <li role="separator" class="divider">
+                                <li><g:link controller="user" action="logout">Выйти</g:link>
+                            </ul>
+                        </li>
+                    </ul>
+                </g:else>
         </div>
     </div>
 </nav>

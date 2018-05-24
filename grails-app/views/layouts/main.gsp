@@ -16,5 +16,30 @@
     <g:render template="/header"/>
     <g:layoutBody/>
     <asset:javascript src="application.js"/>
+
+    <script>
+        $(document).ready(function() {
+    
+            var cars = ['приобье', 'приозерный', 'опричное'];
+            
+            // Constructing the suggestion engine
+            var cars = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.whitespace,
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                local: cars
+            });
+            
+            $('.typeahead').typeahead(
+                {
+                hint: true,
+                highlight: true,
+                minLength: 1
+            },
+            {
+                name: 'cars',
+                source: cars
+            });
+        });
+    </script>
 </body>
 </html>

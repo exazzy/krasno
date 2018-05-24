@@ -1,4 +1,5 @@
 <div class="container">
+%{--
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis id consectetur purus ut faucibus. Id diam maecenas ultricies mi. At in tellus integer feugiat scelerisque varius morbi enim. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer. Eget mi proin sed libero enim. Pellentesque habitant morbi tristique senectus et netus et. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Facilisis volutpat est velit egestas dui. Vulputate enim nulla aliquet porttitor lacus. Consequat nisl vel pretium lectus quam id leo in vitae. Dui id ornare arcu odio ut. Et ultrices neque ornare aenean euismod elementum.
     </p>
@@ -12,8 +13,10 @@
     <p>
         Euismod in pellentesque massa placerat duis ultricies lacus sed turpis. Imperdiet nulla malesuada pellentesque elit eget gravida. Dui sapien eget mi proin sed libero. Orci dapibus ultrices in iaculis nunc sed augue lacus. Risus ultricies tristique nulla aliquet enim tortor at auctor urna. Elementum tempus egestas sed sed risus pretium. Turpis cursus in hac habitasse platea dictumst. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Ornare aenean euismod elementum nisi. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. Sit amet porttitor eget dolor morbi. Urna cursus eget nunc scelerisque viverra. Maecenas ultricies mi eget mauris pharetra et. Sed risus pretium quam vulputate dignissim suspendisse in est. Id nibh tortor id aliquet lectus.
     </p>
+--}%
 %{--
     <a href="${createLink(controller: 'user', action: 'login')}">Войти</a><br>
     <a href="${createLink(controller: 'user', action: 'signup')}">Регистрация</a><br>
 --}%
+    %{--<div id="map" style="width: 400px; height: 300px"></div>--}%
 </div>

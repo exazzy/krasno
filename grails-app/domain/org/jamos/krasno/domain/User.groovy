@@ -7,25 +7,33 @@ class User {
     String email
     String password
     String confirm
-//    LocalDateTime created
+    String hashedPassword
+
+    // Make activation
+    Boolean active = true
+
+    // LocalDateTime created
 
     static constraints = {
-
-        password(blank: false, minSize: 6)
-
-        validator: { val, obj ->
-            _validate(obj)
-        }
+        email           email: true, unique: true
+        password        nullable: false, minSize: 6
+        confirm         validator: { value, obj -> _validatePassword(obj)}
+        hashedPassword  nullable: true
     }
 
-    static transients = {
+    static transients = [
+        'password',
         'confirm'
+    ]
+
+    static mapping = {
+        hashedPassword column: 'password'
     }
 
-    private _validate(user) {
+    private static _validatePassword(user) {
 
         if (user.password != user.confirm) {
-            user.rejectField('confirm', 'user.invalid.password.confirm')
+            user.errors.rejectValue('confirm', 'user.password.dontmatch')
         }
     }
 }
